@@ -21,6 +21,7 @@ RUN apk -U add --no-cache \
     nodejs \
     yarn \
     imagemagick \
+    bash \
     tzdata \
     less \
     && rm -rf /var/cache/apk/* \

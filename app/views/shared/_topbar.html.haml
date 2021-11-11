@@ -13,4 +13,4 @@
           %a#dropdown01.nav-link.dropdown-toggle{"aria-expanded" => "false", "data-bs-toggle" => "dropdown", :href => "#"} Configurações
           %ul.dropdown-menu{"aria-labelledby" => "dropdown01"}
             %li
-              %a.dropdown-item{:href => "#"} Sair
+              = link_to('Sair', destroy_user_session_path, method: :get, class: 'dropdown-item')

@@ -1,11 +1,8 @@
-%h2 Forgot your password?
+%h1.h3.mb-3.font-weight-normal.title{:style => "text-align: center"}  Esqueceu sua senha?
 = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
   = f.error_notification
   .form-inputs
-    = f.input :email,                       |
-      required: true,                       |
-      autofocus: true,                      |
-      input_html: { autocomplete: "email" } |
+    = f.input :email, required: true, label: false, placeholder: 'E-mail', autofocus: true, input_html: { autocomplete: "email" }
   .form-actions
-    = f.button :submit, "Send me reset password instructions"
+    = f.button :submit, "Recuperar senha", class: 'btn btn-primary btn-block'
 = render "devise/shared/links"

@@ -1,13 +1,9 @@
-%h2 Resend confirmation instructions
+%h1.h3.mb-3.font-weight-normal.title{:style => "text-align: center"} Reenviar instruções de confirmação
 = simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f|
   = f.error_notification
   = f.full_error :confirmation_token
   .form-inputs
-    = f.input :email,                                                                          |
-      required: true,                                                                          |
-      autofocus: true,                                                                         |
-      value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), |
-      input_html: { autocomplete: "email" }                                                    |
+    = f.input :email, required: true, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), input_html: { autocomplete: "email" }
   .form-actions
-    = f.button :submit, "Resend confirmation instructions"
+    = f.button :submit, "Resend confirmation instructions" class: 'btn btn-primary btn-block'
 = render "devise/shared/links"
