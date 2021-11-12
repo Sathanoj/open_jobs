@@ -21,6 +21,8 @@ gem 'webpacker', '~> 5.0'
 
 group :development, :test do
   gem 'awesome_print'
+  gem 'brakeman', '~> 5.1.2'
+  gem 'bundler-audit', '~> 0.9.0.1'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry'
   gem 'pry-rails'
